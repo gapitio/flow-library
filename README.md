@@ -6,7 +6,7 @@ It provides a searchable index of user-contributed flows as well as node package
 published to npm.
 
 ## Building and running a docker image
-1. sudo docker built . -t dockerflow:1.0
+1. sudo docker build . -t dockerflow:1.0
 
 2. Setup using docker compose
 
