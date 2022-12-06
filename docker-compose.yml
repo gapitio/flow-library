@@ -1,16 +1,13 @@
-version: '2'
-
 services:
 
-  node:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - /flow-library/node_modules # prevent them being overwritten by the above
-      - .:/flow-library
+  dockerflow:
+    image: dockerflow
+    restart: unless-stopped
+#    volumes:
+#      - /flow-library/node_modules # prevent them being overwritten by the above
+#      - .:/flow-library
     ports:
-      - "8080:8080"
+      - "8008:8008"
       - "5858:5858"
     links:
       - mongo
@@ -19,9 +16,5 @@ services:
   mongo:
     image: mongo
     volumes:
-      - mongo-data:/data/db
-    ports:
-      - '27017:27017'
+      - /data/flow/moongodb:/data/db
 
-volumes:
-  mongo-data:

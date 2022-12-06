@@ -5,6 +5,11 @@ This is the source of the application behind <http://flows.nodered.org>.
 It provides a searchable index of user-contributed flows as well as node packages
 published to npm.
 
+## Building and running a docker image
+1. sudo docker built . -t dockerflow:1.0
+
+2. Setup using docker compose
+
 ## Running a development copy
 
 This repo comes with a docker-compose based development environment. To get started:
